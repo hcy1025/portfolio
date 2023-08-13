@@ -27,7 +27,7 @@
     <link rel="canonical" href="...">
 
     <!-- //　圖示 -->
-    <link rel="icon" href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/eva-logo_icon.ico" type="image/x-icon" >
+    <link rel="icon" type="image/png" href="...">
 
     <!-- //　行動版圖示 -->
     <link rel="apple-touch-icon" href="...">
@@ -50,26 +50,64 @@
 "description": "..."
 }
 </script>
-    <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <!-- //　google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/eva-logo_icon.ico"
+        type="image/x-icon">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- bar -->
-    <div class="bar">
-        <a href="" id="html">Eva Hsieh</a>
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#portfolio">作品集</a>
-            <a href="#contact">與我聯繫</a>
-            <a href="https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view" target="_blank">簡歷下載</a>
-        </nav>
-    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand title" href="" id="html">Eva Hsieh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">作品集</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">與我聯繫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view"
+                            target="_blank">簡歷下載</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 
     <!-- banner -->
     <div class="banner">
@@ -78,152 +116,181 @@
     </div>
 
     <!-- 自我介紹 -->
-    <div id="about" class="container">
-        <div class="background"></div>
-        <div class="infleft-side fade-in">
-            <img src="https://github.com/hcy1025/portfolio/blob/main/images/%E5%A4%A7%E9%A0%AD%E7%85%A7.png?raw=true" alt="個人照片">
-        </div>
-        <div class="infright-side fade-in">
-            <h2>Hi ! <br>I am Eva.</h2>
-            <p>我是佳穎，熟悉 Illustration、Photoshop操作，已有5年以上視覺設計相關經歷。</p>
-            <p>做事細心，善於溝通與團隊合作。平常喜歡觀察周遭的人事物，喜歡學習新事物，提升自己的視覺和美學感知能力，並不斷挑戰自我。</p>
-            <button class="btn"
-                onclick="window.open('https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view?usp=sharing', '_blank')">簡歷下載</button>
+    <div id="about" class="bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="introleft-side">
+                        <img src="https://github.com/hcy1025/portfolio/blob/main/images/%E5%A4%A7%E9%A0%AD%E7%85%A7.png?raw=true"
+                            alt="個人照片">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="introright-side">
+                        <h2>Hi ! <br>I am Eva.</h2>
+                        <p>我是佳穎，熟悉 Illustration、Photoshop操作，已有5年以上視覺設計相關經歷。</p>
+                        <p>做事細心，善於溝通與團隊合作。平常喜歡觀察周遭的人事物，喜歡學習新事物，提升自己的視覺和美學感知能力，並不斷挑戰自我。</p>
+                        <button class="btn"
+                            onclick="window.open('https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view?usp=sharing', '_blank')">簡歷下載</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main>
-        <!-- 工作經歷內容區塊 -->
-        <div id="work" class="content fade-in">
-            <div class="left-side">
-                <h2>工作經歷</h2>
-            </div>
-            <div class="right-side">
-                <h3>樂雲智能有限公司 | 行銷經理</h3>
-                <p>2019年2月 - 2022年10月</p>
-                <p>公司提供雲端平台、資安產品、直播平台及實體主機租賃等多項服務，擔任行銷設計人員，規劃官網內容及服務、並定期維護更新，曾舉辦實體研討會及參展台灣資安大會，並負責相關文宣及輔銷物製作。</p>
-
-                <br>
-                <br>
-                <br>
-                <h3>博軒股份有限公司 | 業務專員</h3>
-                <p>2015年4月 - 2019年1月</p>
-                <p>公司主要印製客製化團體服，擔任公司業務專員，拜訪客戶、了解客戶需求，完成設計、並成交訂單。同時也擔任社群媒體小編，推廣客群及進行行銷活動，並透過時下流行通訊軟體與客戶即時溝通。</p>
-
+    <!-- 工作經歷內容區塊 -->
+    <div id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="left-side">
+                        <h2>工作經歷</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="right-side">
+                        <h3>樂雲智能有限公司 | 行銷經理</h3>
+                        <p>2019年2月 - 2022年10月</p>
+                        <p>公司提供雲端平台、資安產品、直播平台及實體主機租賃等多項服務，擔任行銷設計人員，規劃官網內容及服務、並定期維護更新，曾舉辦實體研討會及參展台灣資安大會，並負責相關文宣及輔銷物製作。
+                            <br>
+                            <br>
+                            <br>
+                        <h3>博軒股份有限公司 | 業務專員</h3>
+                        <p>2015年4月 - 2019年1月</p>
+                        <p>公司主要印製客製化團體服，擔任公司業務專員，拜訪客戶、了解客戶需求，完成設計、並成交訂單。同時也擔任社群媒體小編，推廣客群及進行行銷活動，並透過時下流行通訊軟體與客戶即時溝通。</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <!-- 學歷內容區塊 -->
-        <div id="education" class="content fade-in">
-            <div class="left-side">
-                <h2>學歷</h2>
-            </div>
-            <div class="right-side">
-                <h3>台北實踐大學 | 資訊安全與管理學系</h3>
-                <p>2011年 - 2015年</p>
-            </div>
+    </div>
+    <hr>
 
+    <!-- 學歷內容區塊 -->
+    <div id="education">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="left-side">
+                        <h2>學歷</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="right-side">
+                        <h3>台北實踐大學 | 資訊安全與管理學系</h3>
+                        <p>2011年 - 2015年</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- 作品集內容區塊 -->
+    <div id="portfolio" class="portfolio">
+        <!-- 標題 -->
+        <div class="section-title">
+            <h2>作品集</h2>
         </div>
 
-        <!-- 作品集內容區塊 -->
-        <div id="portfolio" class="portfolio">
-            <!-- 標題 -->
-            <div class="section-title">
-                <h2>作品集</h2>
-            </div>
-            <!-- 作品區塊 -->
-            <div class="portfolio-item">
-                <!-- <img src="/images/logo design.png" alt="Logo設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/logo%20design.png?raw=true" alt="Logo設計">
-                <h3>Logo設計</h3>
-                <p>公司logo、產品logo設計</p>
-                <button class="custom-button">按鈕</button>
-            </div>
+        <!-- 作品區塊 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/logo%20design.png?raw=true"
+                        alt="Logo設計">
+                    <h3>Logo設計</h3>
+                    <p>公司logo、產品logo設計</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176367937/Logo', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/card.png" alt="名片設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/card.png?raw=true" alt="名片設計">
-                <h3>名片設計</h3>
-                <p>採用局部上光印製，不僅增加質感，名片放上主打產品logo，可加深客戶印象</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176359035/_', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/card.png?raw=true" alt="名片設計">
+                    <h3>名片設計</h3>
+                    <p>採用局部上光印製，不僅增加質感，名片放上主打產品logo，可加深客戶印象</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176359035/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/dm.png" alt="DM設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/DM.png?raw=true" alt="DM設計">
-                <h3>DM設計</h3>
-                <p>提供產品重點說明，讓客戶快速了解公司服務</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176364777/DM', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/DM.png?raw=true" alt="DM設計">
+                    <h3>DM設計</h3>
+                    <p>提供產品重點說明，讓客戶快速了解公司服務</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176364777/DM', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/manual.png" alt="手冊設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/manual.png?raw=true" alt="手冊設計">
-                <h3>手冊設計</h3>
-                <p>針對該資安產品詳細介紹</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176365225/_', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/manual.png?raw=true" alt="手冊設計">
+                    <h3>手冊設計</h3>
+                    <p>針對該資安產品詳細介紹</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176365225/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/poster.png" alt="海報製作"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/poster.png?raw=true" alt="海報製作">
-                <h3>海報製作</h3>
-                <p>舉辦實體研討會，海報張貼至活動大樓大廳，增加宣傳效果</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176366907/_', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/poster.png?raw=true" alt="海報製作">
+                    <h3>海報製作</h3>
+                    <p>舉辦實體研討會，海報張貼至活動大樓大廳，增加宣傳效果</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176366907/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/file.png" alt="禮贈品設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/file.png?raw=true" alt="禮贈品設計">
-                <h3>禮贈品設計</h3>
-                <p>資料夾、傳輸線製作</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176406309/_', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/file.png?raw=true" alt="禮贈品設計">
+                    <h3>禮贈品設計</h3>
+                    <p>資料夾、傳輸線製作</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176406309/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/web.png" alt="網站設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/web.png?raw=true" alt="網站設計">
-                <h3>網站設計</h3>
-                <p>網站經營、後台維護、SEO、Google Ads關鍵字分析</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176367439/_', '_blank')">More</button>
-            </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/web.png?raw=true" alt="網站設計">
+                    <h3>網站設計</h3>
+                    <p>網站經營、後台維護、SEO、Google Ads關鍵字分析</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176367439/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/booth.png" alt="展攤設計"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/booth.png?raw=true" alt="展攤設計">
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/booth.png?raw=true" alt="展攤設計">
                 <h3>展攤設計</h3>
                 <p>參展2022 臺灣資安大會，攤位設計、易拉展設計</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176359537/_', '_blank')">More</button>
-            </div>
+                <button class="custom-button"
+                    onclick="window.open('https://www.behance.net/gallery/176359537/_', '_blank')">More</button>
+                </div>
 
-            <div class="portfolio-item">
-                <!-- <img src="/images/mrt.png" alt="實體廣告"> -->
-                <img src="https://github.com/hcy1025/portfolio/blob/main/images/mrt.png?raw=true" alt="實體廣告">
-                <h3>實體廣告規劃</h3>
-                <p>捷運燈箱及公車廣告規劃提案</p>
-                <button class="custom-button" onclick="window.open('https://www.behance.net/gallery/176364319/_', '_blank')">More</button>
+                <div class="col-md-4 portfolio-item">
+                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/mrt.png?raw=true" alt="實體廣告">
+                    <h3>實體廣告規劃</h3>
+                    <p>捷運燈箱及公車廣告規劃提案</p>
+                    <button class="custom-button"
+                        onclick="window.open('https://www.behance.net/gallery/176364319/_', '_blank')">More</button>
+                </div>
             </div>
         </div>
+    </div>
+    </div>
+    <div id="contact" class="contact">
+        <h2>與我聯繫</h2>
+        <p>e880192@yahoo.com.tw</p>
+        <div class="info">
+            <a href="https://www.behance.net/4bc59170" target="_blank">Behance</a>
+            <a href="https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view"
+                target="_blank">Resume</a>
+            <!-- <p>Behance</p>
+            <p>Resume</p> -->
         </div>
-        <div id="contact" class="contact">
-            <h2>與我聯繫</h2>
-            <p>e880192@yahoo.com.tw</p>
-            <div class="info">
-                <a href="https://www.behance.net/4bc59170" target="_blank">Behance</a>
-                <a href="https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view" target="_blank">Resume</a>
-                <!-- <p>Behance</p>
-                <p>Resume</p> -->
-            </div>
 
-        </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        © Copyright 2023 Eva Hsieh. All rights reserved.
-    </footer>
-    <script src="script.js"></script>
+<footer>
+    © Copyright 2023 Eva Hsieh. All rights reserved.
+</footer>
+<script src="script.js"></script>
 
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 </body>
 

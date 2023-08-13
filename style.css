@@ -1,210 +1,37 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-img {
-    vertical-align: middle;
-}
-
-/* 以上為CSS Reset */
 * {
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* bar ================== */
-.bar {
-    /* width: 1200px;
-    margin: 0 auto; */
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    /* 將内容在 flex 容器内水平分布 */
-    align-items: center;
-    /* 垂直居中對齊子元素 */
-    position: sticky;
-    top: 0;
-    padding: 0 20px;
-    /* 添加左右 padding 以增加間距 */
-    height: 70px;
-    z-index: 100;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 
-.logo {
-    height: auto;
-    /* 根據需要設置 logo 的高度 */
-    /* 如果 logo 寬度不固定，可以將寬度設為 auto，logo 將保持原始寬高比例 */
-}
-
-.bar a {
+.title {
     background-color: #ffffff;
     color: #000000;
     font-size: 32px;
-    font-weight: 700;
+    /* font-weight: 500px; */
     display: inline-block;
-    /* background-repeat: no-repeat; */
-    /* background-position: center bottom; */
-    /* width: 100px; */
     height: 70px;
     text-align: center;
     line-height: 70px;
     text-decoration: none;
 }
 
-.nav-links {
-    display: flex;
-}
-
-.nav-links a {
+.nav-item a {
     background-color: #ffffff;
     color: #333;
     font-size: 18px;
     font-weight: normal;
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 10px;
     /* 調整選項的內邊距 */
+    margin: 0px 10px;
     height: 70px;
     line-height: 70px;
     text-align: center;
@@ -212,54 +39,9 @@ body {
     /* 添加 hover 效果（可選） */
 }
 
-.nav-links a:hover {
+.nav-item a:hover {
     /* background-color: #909090; */
-    color: #1CB5E0;
-}
-
-/* ========================================= */
-/* 初始狀態下將透明度設為0，使元素隱藏 */
-/* .fade-in {
-    opacity: 0;
-    transition: opacity 1.5s; */
-    /* 使用1秒的過渡效果，您可以根據需要調整這個值 */
-/* } */
-
-/* 當具有.fade-in類別的元素進入畫面時，將透明度漸變為1，從而顯示元素 */
-/* .fade-in.is-visible {
-    opacity: 1;
-} */
-
-/* 定義由下滑入的動畫效果 */
-@keyframes slideInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 定義淡入的動畫效果 */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 初始狀態下將透明度設為0，使元素隱藏 */
-.fade-in {
-    opacity: 0;
-}
-
-/* 當具有.fade-in類別的元素進入畫面時，啟用由下滑入的動畫和淡入動畫 */
-.fade-in.slide-in-from-bottom {
-    animation: slideInFromBottom 1.5s ease forwards, fadeIn 1.5s ease forwards;
+    color: #1CB5E0 !important;
 }
 
 /* banner 區域 ========================================= */
@@ -269,32 +51,14 @@ body {
     background-image: url(./images/banner1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    max-width: 100%;
     height: 1080px;
     margin: 0 auto;
-
-    /* background-position: center center; */
-
-    /* padding-bottom: 10px; */
-    /* overflow: hidden; */
 }
-
-/* .banner img { */
-/* width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; */
-/* margin: 四周一致; */
-/* margin: 上下 左右; */
-/* margin: 上 右 下 左 */
-/* margin: 上 右左 下 */
-/* transform: translateX(-25%); */
-/* } */
 
 .banner h1 {
     color: #ffffff;
-    font-size: 80px;
+    font-size: calc(1.5rem + 2.8vw);
     font-weight: 700;
     text-align: center;
     padding-top: 15%;
@@ -302,14 +66,19 @@ body {
 
 .banner h2 {
     color: #ffffff;
-    font-size: 30px;
+    /* font-size: calc(0.5rem + 1.2vw); */
     font-weight: 500;
     text-align: center;
     line-height: 120px;
 }
 
 /* 自我介紹 ================== */
-.container {
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: #1CB5E0 !important;
+}
+
+.intro {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -318,57 +87,48 @@ body {
     padding: 30px;
 }
 
-.background {
-    position: absolute;
-    /* top: 0;
-    left: 0; */
-    width: 100%;
-    height: 450px;
-    background-color: #1CB5E0;
-    /* 自我介紹區塊的背景顏色 */
-    z-index: -1;
-    /* 放置在下層 */
-}
-
 .btn {
     width: 120px;
     height: 36px;
+    margin-bottom: 50px;
     background-image: linear-gradient(135deg, #c547ef 0%, #458bdb 55%, #430eb7 100%);
     border-radius: 8px;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:hover {
-    background-image: linear-gradient(135deg, #a246d3 0%, #2e73fc 55%, #6c02e7 100%);
+    background-image: linear-gradient(135deg, #1bbf99 0%, #ea5d83 55%, #7502e7 100%);
     cursor: pointer;
 }
 
-.infleft-side {
+.introleft-side {
     flex: 1;
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.infleft-side img {
-    max-width: 70%;
+.introleft-side img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 50%;
     height: auto;
     display: block;
     border-radius: 50%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-.infright-side {
+.introright-side {
     flex: 2;
     padding-top: 30px;
     padding-left: 20px;
     color: #ffffff;
 }
 
-.infright-side h2 {
+.introright-side h2 {
     font-size: 60px;
     margin-bottom: 16px;
 }
@@ -379,51 +139,19 @@ body {
     font-size: 18px;
 }
 
-.biography {
-    max-width: 1200px;
-    margin: 45px auto;
-    padding: 20px;
-    background-color: #ffffff;
-}
-
-.biography h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #1CB5E0;
-}
-
-.biography p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
 /* 工作經歷 學歷 ================== */
-.content {
-    width: 1200px;
-    margin: 40px auto;
-    padding: 50px 0 50px 0;
-    display: flex;
-    /* 使用flex布局來將div分成左右兩邊 */
-    justify-content: center;
-    /* 讓內容水平置中 */
-    /* align-items: center; */
-    /* 讓內容垂直置中 */
-    /* height: 100vh; */
-    /* 調整容器高度，這裡使用視窗高度作為示例 */
-    /* background-color: #442626; */
-}
-
 hr {
     background-color: #1CB5E0;
-    width: 1200px;
+    /* width: 1200px; */
     border: none;
     /* 移除默認的邊框 */
-    height: 1px;
+    height: 1.5px !important;
     /* 設置粗細，這裡設置為2px */
-    margin: 0 auto;
+    margin: 20px 30px;
 }
 
 .left-side {
+    margin-top: 50px;
     flex: 1;
     /*左邊區塊佔滿剩餘空間*/
     display: flex;
@@ -432,10 +160,18 @@ hr {
     /* 將內容靠上對齊 */
     justify-content: center;
     /* 將內容水平置中對齊 */
-    /* background-color: #e0e0e0; */
+}
+
+.left-side h2 {
+    font-size: 26px;
+    line-height: 2;
+    color: #1CB5E0;
+    font-weight: 400;
 }
 
 .right-side {
+    margin-top: 50px;
+    margin-bottom: 50px;
     flex: 2;
     /* 右邊區塊佔兩倍剩餘空間*/
     padding: 0px;
@@ -443,21 +179,17 @@ hr {
     /* background-color: #a4a3a3; */
 }
 
-.content h2 {
-    font-size: 26px;
-    line-height: 2;
-    color: #1CB5E0;
-}
-
-.content h3 {
+.right-side h3 {
     font-size: 22px;
     line-height: 2;
+    font-weight: 500;
 }
 
-.content p {
+.right-side p {
     font-size: 15px;
     line-height: 1.5;
 }
+
 
 :target {
     scroll-margin-top: 70px;
@@ -469,33 +201,13 @@ hr {
     /* 添加平滑過渡效果 */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 /* 作品集 區塊的樣式 */
 .portfolio {
-    /* content 區塊的樣式... */
-    display: flex;
-    /* 將 content 區塊內容排列為 flex 佈局 */
-    flex-wrap: wrap;
-    /* 允許 content 區塊內容換行 */
-    justify-content: space-around;
-    /* 水平置中排列作品區塊 */
-    /* width: 1600px; */
     margin: 50px auto 0;
     background-color: #e7f7f9;
 }
 
-/* section-title 區塊的樣式 */
 .section-title {
-    /* section-title 區塊的樣式... */
     font-size: 26px;
     line-height: 2;
     color: #1CB5E0;
@@ -508,30 +220,28 @@ hr {
     /* 標題與作品區塊之間的間距 */
 }
 
+.section-title h2 {
+    font-size: 26px;
+    line-height: 2;
+    font-weight: 400;
+}
+
 /* portfolio-item 區塊的樣式 */
 .portfolio-item {
-    /* 調整 portfolio-item 區塊的樣式... */
-    flex: 0 0 calc(33.33% - 80px);
-    /* 設置每個作品區塊佔據 33.33% 寬度，並留出 0px 的間距 */
     margin-bottom: 100px;
     /* 作品區塊之間的間距 */
     text-align: center;
 }
 
 .portfolio-item img {
-    /* 調整圖片的樣式... */
     width: 100%;
-    /* 確保圖片寬度充滿父容器 */
     height: auto;
-    /* 根據實際圖片比例調整高度 */
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-item h3 {
-    /* 調整文字的樣式... */
     margin-top: 10px;
-    /* 設置文字和圖片之間的間距 */
     font-size: 22px;
     text-align: center;
     line-height: 50px;
@@ -586,23 +296,22 @@ hr {
     margin: 30px 20px 0 20px;
 }
 
-.info{
+.info {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .info a {
-color: #fff;
-font-size: 20px;
-display: inline-block;
-padding: 0 15px;
-/* 調整選項的內邊距 */
-height: 70px;
-line-height: 70px;
-text-align: center;
-text-decoration: none;
-/* 添加 hover 效果（可選） */
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 15px;
+    /* 調整選項的內邊距 */
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .info a:hover {
@@ -620,4 +329,14 @@ footer {
     line-height: 1.5;
     text-align: center;
     padding: 20px;
+}
+
+/* ==========手機版========== */
+@media (max-width: 767.98px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .banner{
+        padding-top: 30%;
+    }
 }
