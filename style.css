@@ -73,7 +73,7 @@ body {
 }
 
 /* 自我介紹 ================== */
-.bg-success {
+.bg-primary {
     --bs-bg-opacity: 1;
     background-color: #1CB5E0 !important;
 }
