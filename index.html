@@ -1,339 +1,290 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eva Hsieh</title>
-    <meta name="description" content="Hi! I am Eva!">
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>謝佳穎 Eva Hsieh | UI/UX 設計師</title>
+<meta name="description" content="謝佳穎 Eva Hsieh：UI/UX 設計、網頁設計、視覺設計。7-8 年視覺與介面設計經驗。">
+<meta property="og:title" content="謝佳穎 Eva Hsieh | UI/UX 設計師">
+<meta property="og:image" content="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_500px.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#243b58;--cyan:#1fa8d8;--ink:#1f2d3d;--muted:#5b6b7c;--line:#d5e3ec;--bg:#fff;--soft:#f3f8fb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Noto Sans TC","Poppins",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h2{font-family:"Poppins","Noto Sans TC",sans-serif;font-size:1.5rem;letter-spacing:.18em;color:var(--navy);padding-bottom:12px;border-bottom:2px solid var(--cyan);margin-bottom:32px}
 
-    <!-- //　Facebook OG TAG -->
-    <meta property="og:locale" content="zh_TW" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Eva Hsieh" />
-    <meta property="og:description" content="Hi! I am Eva!" />
-    <meta property="og:url" content="..." />
-    <meta property="og:site_name" content="..." />
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_500px.png" />
-    <!-- // Twitter TAG -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="..." />
-    <meta name="twitter:title" content="Eva Hsieh" />
-    <meta name="twitter:site" content="..." />
-    <meta name="twitter:image" content="..." />
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:Poppins,sans-serif;color:var(--navy);font-weight:600}
+nav ul{display:flex;gap:24px;list-style:none;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--cyan)}
 
-    <!-- //　網址 -->
-    <link rel="canonical" href="...">
+/* hero */
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:center}
+.hero img{width:240px;height:240px;border-radius:50%;object-fit:cover;background:var(--soft)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--navy);line-height:1.2}
+.hero h1 span{font-family:Poppins,sans-serif;font-weight:400;color:var(--cyan);font-size:.55em;margin-left:.4em}
+.hero .role{font-size:1.2rem;color:var(--navy);margin:8px 0 20px}
+.contacts{display:flex;flex-wrap:wrap;gap:8px 28px;color:var(--muted);font-size:.95rem}
+.contacts a{text-decoration:none}.contacts a:hover{color:var(--cyan)}
+.btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:500;border:2px solid var(--navy);color:var(--navy)}
+.btn.fill{background:var(--navy);color:#fff}
+.btn:hover{border-color:var(--cyan);background:var(--cyan);color:#fff}
 
-    <!-- //　圖示 -->
-    <link rel="icon" type="image/png" href="...">
+/* about band */
+.about{background:var(--navy);color:#fff}
+.about h2{color:#fff}
+.about .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start}
+.about ul{list-style:none}
+.about li{padding-left:18px;position:relative;margin-bottom:14px}
+.about li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--cyan)}
+.about li b{color:#fff}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px}
+.stats strong{display:block;font-family:Poppins,sans-serif;font-size:2rem;line-height:1.2}
+.stats span{font-size:.9rem;color:#b9cbe0}
 
-    <!-- //　行動版圖示 -->
-    <link rel="apple-touch-icon"
-        href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_500px.png">
-    <link rel="apple-touch-icon" sizes="72×72"
-        href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_500px.png">
-    <link rel="apple-touch-icon" sizes="114×114"
-        href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_500px.png">
+/* rows (experience / training / education / skills) */
+.row{display:grid;grid-template-columns:240px 1fr;gap:12px 40px;padding:20px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .when{color:var(--muted);font-size:.9rem}
+.row .org{font-weight:700;color:var(--navy);font-size:1.05rem}
+.row h3{font-size:1.1rem;color:var(--navy);margin-bottom:6px}
+.row ul{list-style:none}
+.row li{padding-left:16px;position:relative;margin-bottom:6px;font-size:.97rem}
+.row li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:5px;border-radius:50%;background:var(--cyan)}
+.row .plain{font-size:1.05rem;color:var(--navy);font-weight:500}
 
-    <!-- //　預載DNS -->
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="dns-prefetch" href="//s.w.org">
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:0 32px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.filters button{font:inherit;cursor:pointer;padding:10px 2px;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;background:none;color:var(--muted)}
+.filters button:hover{color:var(--navy)}
+.filters button[aria-selected="true"]{color:var(--navy);font-weight:700;border-bottom-color:var(--cyan)}
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.work{display:flex;flex-direction:column}
+.work .thumb{aspect-ratio:4/3;background:var(--soft);border-radius:8px;overflow:hidden;display:grid;place-items:center;color:var(--muted);font-size:.9rem;border:1px solid var(--line)}
+.work .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.work h3{margin-top:12px;font-size:1.05rem;color:var(--navy)}
+.work p{font-size:.92rem;color:var(--muted)}
+.work .tag{font-size:.8rem;color:var(--cyan);font-weight:500}
+.work a{text-decoration:none}
+.work a:hover h3{color:var(--cyan)}
 
-    <!-- //　schema -->
-    <script type="application/ld+json">
-{
-"@context": "http://schema.org",
-"@type": "WebSite",
-"@id": "#website",
-"name": "...",
-"image":"...",
-"url": "...",
-"description": "..."
+footer{background:var(--soft);padding:56px 0 40px;text-align:center}
+footer p{color:var(--muted)}
+footer .links{margin:16px 0;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+footer .links a{color:var(--navy);font-weight:500}
+small{display:block;margin-top:24px;color:var(--muted)}
+
+@media(max-width:760px){
+  nav ul{gap:14px;font-size:.85rem}
+  .hero .wrap,.about .grid,.row{grid-template-columns:1fr}
+  .hero img{width:180px;height:180px}
+  section{padding:52px 0}
 }
-</script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
-    <!-- //　google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap" rel="stylesheet">
-    <!-- font-awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-
-    <link rel="icon" href="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/H-logo_icon.ico"
-        type="image/x-icon">
-
-    <!-- style.css -->
-    <link rel="stylesheet" href="style.css">
+</style>
 </head>
-
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand title" href="" id="html">Eva Hsieh</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">作品集</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">與我聯繫</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://drive.google.com/file/d/1AFXxPG12BnbTe4WbYxUN9vl6b6CZIrA4/view"
-                            target="_blank">簡歷下載</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- banner -->
-    <div class="banner">
-        <h1>UI / UX Designer</h1>
-        <h2>Enterprise OA Systems · Group Apps · Product Interfaces</h2>
+<nav aria-label="主選單">
+  <div class="wrap">
+    <b>Eva Hsieh</b>
+    <ul>
+      <li><a href="#about">關於我</a></li>
+      <li><a href="#experience">經歷</a></li>
+      <li><a href="#portfolio">作品集</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#contact">聯繫</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="images/大頭照.png" alt="謝佳穎 Eva Hsieh 的個人照片">
+    <div>
+      <h1>謝佳穎<span>Eva Hsieh</span></h1>
+      <p class="role">UI/UX 設計師 | 網頁設計 | 視覺設計</p>
+      <div class="contacts">
+        <a href="mailto:e880192@gmail.com">e880192@gmail.com</a>
+      </div>
+      <div class="btns">
+        <a class="btn fill" href="#portfolio">查看作品集</a>
+        <a class="btn" href="https://drive.google.com/file/d/1AFXxPG12BnbTe4WbYxUN9vl6b6CZIrA4/view" target="_blank" rel="noopener">下載簡歷</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>ABOUT ME</h2>
+    <div class="grid">
+      <ul>
+        <li><b>跨平台介面設計：</b>專注於 B2B 企業系統與 B2C 行動 App 的 UI/UX 體驗規劃。</li>
+        <li><b>情境導向實作：</b>精熟 Figma 操作，擅長以使用者情境導向繪製 Wireframe 與 Prototype。</li>
+        <li><b>AI 協作與規範建置：</b>具備導入 AI 協作從 0 到 1 打造 Design System 的實務經驗，能高效優化介面動線與資訊架構。</li>
+        <li><b>技術整合與高效協作：</b>具備 HTML/CSS 前端基礎與專案管理思維，能與 PM 及工程師高效協作，降低開發溝通成本以確保設計精準落地。</li>
+      </ul>
+      <div class="stats">
+        <div><strong>7–8 年</strong><span>視覺與介面設計經驗</span></div>
+        <div><strong>50+</strong><span>自建 Design System 元件</span></div>
+        <div><strong>−80%</strong><span>外包修改需求</span></div>
+        <div><strong>−40%</strong><span>官網更新工時</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>EXPERIENCES</h2>
+
+    <div class="row">
+      <div><div class="when">2024/04 – 至今</div><div class="org">力新國際科技股份有限公司（台鋼集團）</div></div>
+      <div>
+        <h3>UI/UX 設計與行銷設計師</h3>
+        <ul>
+          <li>主導企業 OA 系統、Agentory AI 產品線及集團運動球隊 App 之 UI 介面規劃與設計。</li>
+          <li>導入 AI 協作從零打造標準化 UI Design System，建置 8-point grid 網格規則與 50+ 組可複用元件，強化跨產品線視覺一致性，並降低開發團隊溝通成本 30%。</li>
+          <li>優化 WordPress 官網架構與版面，成功降低 80% 外包修改需求、縮短更新工時 40%。</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- 自我介紹 -->
-    <div id="about" class="bg-primary text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="introleft-side">
-                        <img src="https://raw.githubusercontent.com/hcy1025/portfolio/main/images/%E5%A4%A7%E9%A0%AD%E7%85%A7500px.png"
-                            alt="個人照片">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <div class="introright-side">
-                        <h2>Hi ! <br>I am Eva.</h2>
-                        <p>我是佳穎，熟悉 Figma、Illustrator、Photoshop操作，具備行銷與視覺設計背景，現專注於企業 OA 系統與行動 App 的 UI / UX 設計。
-                            實務參與公司內部系統介面規劃，以及集團旗下運動球隊 App（棒球、籃球、排球）之 UI 協作設計，
-                            熟悉以使用情境與流程為導向，透過 Figma 製作 Wireframe 與 Prototype，
-                            並與 PM、工程師密切合作，確保設計可實作並符合實際需求。</p>
-                        <p>除了工作之外，我也熱愛觀察並學習周遭的人事物，不僅提供我的創作靈感，也不斷激發我對於新事物的好奇心。我喜歡挑戰自我，持續學習和探索，以提升自己的視覺和美學感知能力。</p>
-                        <br>
-
-                        <p><b>UI/UX Experience</b></p>
-                            <ul>
-                                <li>企業內部 OA 系統 UI 設計（後台管理、流程頁、資料列表）</li>
-                                <li>參與集團旗下 運動球隊 App UI 協作設計（棒球、籃球、排球）</li>
-                                <li>使用 Figma 製作 Wireframe、元件設計與 Prototype</li>
-                                <li>協助定義頁面結構、操作流程與介面一致性</li>
-                                <li>與 PM、工程師協作，釐清需求並調整設計可行性</li>
-                            </ul>
-
-                        <button class="btn"
-                            onclick="window.open('https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view?usp=sharing', '_blank')">簡歷下載</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+      <div><div class="when">2019/02 – 2022/10</div><div class="org">樂雲智能有限公司</div></div>
+      <div>
+        <h3>網頁企劃與視覺設計專員</h3>
+        <ul>
+          <li>負責 3 大公有雲（AWS、GCP、Azure）與十餘項資安服務官網的 UI 介面更新，透過梳理資訊層級與模組化設計，提升訪客停留時間，並降低約 30% 的後續網頁維護工時。</li>
+          <li>結合 SEO 策略優化網頁圖文素材，成功將主力資安產品「Cloudflare」推升至 Google 搜尋第一頁，在職期間大幅帶動網站自然流量（成長約 150%）與產品詢問度。</li>
+          <li>負責企業識別（CI）建置、線上/線下活動主視覺與大型展會（台灣資安大會）宣傳物料設計。</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- 工作經歷內容區塊 -->
-    <div id="work">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="left-side">
-                        <h2>工作經歷</h2>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <div class="right-side">
-                        <h3>力新國際科技股份有限公司（台鋼集團） | 行銷設計師</h3>
-                        <p>2024年4月 - 仍在職</p>
-                        <p>力新國際隸屬台鋼集團，專注於企業文件數位化與智慧辦公解決方案，提供包含 OCR、AI 文件辨識、文件管理系統等產品，協助企業提升營運效率與資訊管理品質。<br>
-                            <ul>
-                                <li><b>UI/UX 介面設計（Figma）：</b>協助規劃 Wireframe、頁面架構、元件庫與 Prototype，並與 PM、工程師協作需求，提升設計規格可落地性，降低返工率。</li>
-                                <li><b>跨部門合作與流程優化：</b>整合行銷、業務與專案需求，建立可重複使用的設計模板，提升整體產出效率、活動製作時間明顯縮短，並強化對外整體形象一致性。</li>
-                                <li><b>品牌視覺與行銷素材設計：</b>負責社群圖文、簡報、廣宣與活動主視覺設計，建立一致品牌識別，使活動曝光度及社群貼文點擊率提升。</li>
-                                <li><b>WordPress 官網維護與優化：</b>更新內容、調整版面、統一素材規格，並逐步優化網站架構，降低 80% 外包修改需求、縮短更新工時 40%，提升網站停留率與可讀性。</li>
-                                <li><b>支援台鋼集團子公司設計需求：</b>跨品牌協助 Logo、名片、行銷物件與品牌延伸設計，使視覺統一度提升、子公司製作時程縮短，同時降低整體外包成本。</li>
-                            </ul>
-                            <br>
-                            <br>
-                        <h3>樂雲智能有限公司 | 行銷經理</h3>
-                        <p>2019年2月 - 2022年10月</p>
-                        <p>公司提供雲端平台、資安產品、直播平台及實體主機租賃等多項服務，擔任行銷設計專員。<br>
-                            <ul>
-                                <li><b>負責多項服務官網的規劃、內容更新與視覺維護：</b>確保資訊正確與符合品牌形象，使網站結構更清晰、可讀性提升，成功降低後續維護成本並提升訪客停留時間。</li>
-                                <li><b>策劃並執行線上/線下活動與大型展會（含台灣資安大會）：</b>負責活動主視覺、現場物料與宣傳內容，提升活動參與度，增加品牌曝光度。</li>
-                                <li><b>製作行銷素材（Banner、社群內容、EDM、SEO 圖文）：</b>成功將公司主打產品 SEO 排上 Google 搜尋第一頁，大幅提升自然流量與產品詢問度，帶動整體曝光成長。</li>
-                                <li><b>執行企業識別（CI）與產品品牌設計：</b>參與公司 Logo、產品 Logo 的設計與調整並完成商標註冊，提升品牌一致性與正式度，強化產品市場辨識度。</li>
-                                <li><b>跨部門協作支援業務推廣材料：</b>製作文宣、展示品、型錄及輔銷物，協助業務團隊推廣產品，有效提升展示專業度與客戶對品牌的信任度。</li>
-                            </ul>
-                            <br>
-                            <br>
-                        <h3>博軒股份有限公司 | 業務專員</h3>
-                        <p>2015年4月 - 2019年1月</p>
-                        <p>公司主要印製客製化團體服，擔任公司業務專員。<br>
-                            <ul>
-                                <li>拜訪客戶、了解客戶需求，報價、設計客戶圖檔、並成交訂單。</li>
-                                <li>在整個團隊中擁有最高的業績表現，獲得了多次表揚和獎勵。</li>
-                                <li>在獎金分發中獲得了最高的金額，顯示了在業務領域的卓越能力和成果。</li>
-                                <li>同時擔任公司社群媒體小編，推廣客群及進行行銷活動，並透過時下流行通訊軟體與客戶即時溝通，以提升銷售業績並擴大客戶群。</li>
-                                <li>通過積極的客戶關係管理和銷售技巧，建立了一個穩固的客戶基礎，促進了業務的持續增長。</li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+      <div><div class="when">2015/04 – 2019/01</div><div class="org">博軒股份有限公司</div></div>
+      <div>
+        <h3>業務與設計專員</h3>
+        <ul>
+          <li>負責客製化圖檔設計與客戶需求訪談，並結合社群行銷操作及透過時下流行通訊軟體與客戶即時溝通，以提升銷售業績並擴大客戶群。</li>
+        </ul>
+      </div>
     </div>
-    <hr>
+  </div>
+</section>
 
-    <!-- 學歷內容區塊 -->
-    <div id="education">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="left-side">
-                        <h2>學歷</h2>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <div class="right-side">
-                        <h3>台北市職能發展中心 | 跨平台網頁設計</h3>
-                        <p>2023年2月 - 2023年5月</p>
-                        <p>參加台北市職能發展中心開辦的跨平台網頁設計課程，在3個月上課期間學習UI / UX設計、Wordpress、HTML / CSS / JS前端開發，運用Figma透過Prototype製作小動畫或是展示網頁原型效果，並學習程式碼運用在網頁設計的技能。</p>
-                            <br>
-                            <br>
-                        <h3>台北實踐大學 | 資訊安全與管理學系</h3>
-                        <p>2011年 - 2015年</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="portfolio" style="background:var(--soft)">
+  <div class="wrap">
+    <h2>PORTFOLIO</h2>
+    <div class="filters" role="tablist" aria-label="作品分類">
+      <button type="button" role="tab" data-cat="all" aria-selected="true">全部</button>
+      <button type="button" role="tab" data-cat="ui" aria-selected="false">UI/UX</button>
+      <button type="button" role="tab" data-cat="graphic" aria-selected="false">平面設計</button>
+      <button type="button" role="tab" data-cat="web" aria-selected="false">網站設計</button>
     </div>
+    <div class="works" id="works"></div>
+  </div>
+</section>
 
-    <!-- 作品集內容區塊 -->
-    <div id="portfolio" class="portfolio">
-        <!-- 標題 -->
-        <div class="section-title">
-            <h2>作品集</h2>
-        </div>
-
-        <!-- 作品區塊 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/logo%20design.png?raw=true"
-                        alt="Logo設計">
-                    <h3>Logo設計</h3>
-                    <p>公司logo、產品logo設計</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176367937/Logo', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/card.png?raw=true" alt="名片設計">
-                    <h3>名片設計</h3>
-                    <p>採用局部上光印製，不僅增加質感，名片放上主打產品logo，可加深客戶印象</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176359035/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/DM.png?raw=true" alt="DM設計">
-                    <h3>DM設計</h3>
-                    <p>提供產品重點說明，讓客戶快速了解公司服務</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176364777/DM', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/manual.png?raw=true" alt="手冊設計">
-                    <h3>手冊設計</h3>
-                    <p>針對該資安產品詳細介紹</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176365225/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/poster.png?raw=true" alt="海報製作">
-                    <h3>海報製作</h3>
-                    <p>舉辦實體研討會，海報張貼至活動大樓大廳，增加宣傳效果</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176366907/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/file.png?raw=true" alt="禮贈品設計">
-                    <h3>禮贈品設計</h3>
-                    <p>資料夾、傳輸線製作</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176406309/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/web.png?raw=true" alt="網站設計">
-                    <h3>網站設計</h3>
-                    <p>網站經營、後台維護、SEO、Google Ads關鍵字分析</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176367439/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/booth.png?raw=true" alt="展攤設計">
-                    <h3>展攤設計</h3>
-                    <p>參展2022 臺灣資安大會，攤位設計、易拉展設計</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176359537/_', '_blank')">More</button>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <img src="https://github.com/hcy1025/portfolio/blob/main/images/mrt.png?raw=true" alt="實體廣告">
-                    <h3>實體廣告規劃</h3>
-                    <p>捷運燈箱及公車廣告規劃提案</p>
-                    <button class="custom-button"
-                        onclick="window.open('https://www.behance.net/gallery/176364319/_', '_blank')">More</button>
-                </div>
-            </div>
-        </div>
+<section id="training">
+  <div class="wrap">
+    <h2>PROFESSIONAL TRAINING</h2>
+    <div class="row">
+      <div class="org">跨平台網頁開發與介面設計</div>
+      <ul><li>參與台北市職能發展中心「跨平台網頁設計」培訓，實務學習 UI/UX 規範、Figma Prototype 製作，以及 HTML/CSS/JS 前端開發技術。</li></ul>
     </div>
+    <div class="row">
+      <div class="org">雲端運算與 AI 趨勢探索</div>
+      <ul><li>於實踐大學推廣部修習「AWS 雲計算之人工智慧與機器學習班」及「資訊安全班」，持續拓展對雲端科技、AI 協作與系統安全的綜合認知。</li></ul>
     </div>
-    <div id="contact" class="contact">
-        <h2>與我聯繫</h2>
-        <p>e880192@yahoo.com.tw</p>
-        <div class="info">
-            <a href="https://www.linkedin.com/in/eva-h-099869193/" target="_blank">Linkedin</a>
-            <a href="https://www.behance.net/4bc59170" target="_blank">Behance</a>
-            <a href="https://drive.google.com/file/d/1d4VAtXgvM6tzYFhkb2FcI9JTUodVvMPm/view" target="_blank">Resume</a>
-        </div>
-        <p>Currently seeking UI / UX Designer opportunities.</p>
+  </div>
+</section>
 
+<section id="education" style="padding-top:0">
+  <div class="wrap">
+    <h2>EDUCATION</h2>
+    <div class="row">
+      <div class="when">2011/9 – 2015/6</div>
+      <div class="plain">台北實踐大學 | 資訊科技與管理學系 學士</div>
     </div>
-    </main>
+  </div>
+</section>
 
-    <footer>
-        © Copyright 2025 Eva Hsieh. All rights reserved.
-    </footer>
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <h2>SKILLS</h2>
+    <div class="row"><div class="org">UI/UX 產品設計</div><div>Figma, Wireframe, Prototype, Design System, UI 介面設計</div></div>
+    <div class="row"><div class="org">視覺與平面設計</div><div>Adobe Illustrator, Photoshop, 品牌識別設計, 影音剪輯 (iMovie)</div></div>
+    <div class="row"><div class="org">網頁開發與架站</div><div>HTML, CSS, JavaScript 基礎, WordPress (Elementor)</div></div>
+    <div class="row"><div class="org">數據分析與行銷</div><div>Google Analytics, SEO 優化, 社群素材企劃</div></div>
+  </div>
+</section>
 
+<footer id="contact">
+  <div class="wrap">
+    <h2 style="border:0;margin-bottom:0">與我聯繫</h2>
+    <p>目前正在尋找 UI/UX 設計師的工作機會。</p>
+    <div class="links">
+      <a href="mailto:e880192@gmail.com">e880192@gmail.com</a>
+      <a href="https://www.linkedin.com/in/eva-h-099869193/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.behance.net/4bc59170" target="_blank" rel="noopener">Behance</a>
+      <a href="https://drive.google.com/file/d/1AFXxPG12BnbTe4WbYxUN9vl6b6CZIrA4/view" target="_blank" rel="noopener">簡歷下載</a>
+    </div>
+    <small>© 2026 Eva Hsieh. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+/* ===== 作品資料：新增作品只要在這裡加一筆 =====
+   cat: ui / graphic / web
+   img: 圖片路徑（留空會顯示佔位框）
+   link: 作品連結（Behance、Figma 等，可留空）            */
+const WORKS = [
+  // --- UI/UX ---
+  {cat:"ui", title:"企業 OA 系統", desc:"後台管理、流程頁、資料列表的介面規劃與設計", img:"images/OA系統mockup.jpg", link:""},
+  {cat:"ui", title:"Agentory 專案總覽", desc:"Agentory AI 產品的今日摘要與專案總覽介面設計", img:"images/專案總覽畫面.jpg", link:""},
+  {cat:"ui", title:"集團運動球隊 App", desc:"棒球、籃球、排球 App 的 UI 協作設計", img:"images/球隊appUI.jpg", link:""},
+  // --- 平面設計 ---
+  {cat:"graphic", title:"Logo 設計", desc:"公司 Logo、產品 Logo 設計", img:"images/logo design.png", link:""},
+  {cat:"graphic", title:"名片設計", desc:"採用局部上光印製，名片放上主打產品 Logo，加深客戶印象", img:"images/card.png", link:""},
+  {cat:"graphic", title:"DM 設計", desc:"提供產品重點說明，讓客戶快速了解公司服務", img:"images/DM.png", link:""},
+  {cat:"graphic", title:"手冊設計", desc:"針對資安產品的詳細介紹", img:"images/manual.png", link:""},
+  {cat:"graphic", title:"海報製作", desc:"實體研討會海報，張貼於活動大樓大廳，增加宣傳效果", img:"images/poster.png", link:""},
+  {cat:"graphic", title:"禮贈品設計", desc:"資料夾、傳輸線製作", img:"images/file.png", link:""},
+  {cat:"graphic", title:"展攤設計", desc:"2022 臺灣資安大會，攤位與易拉展設計", img:"images/booth.png", link:""},
+  {cat:"graphic", title:"實體廣告規劃", desc:"捷運燈箱及公車廣告規劃提案", img:"images/mrt.png", link:""},
+  // --- 網站 ---
+  {cat:"web", title:"網站設計", desc:"網站經營、後台維護、SEO、Google Ads 關鍵字分析", img:"images/web.png", link:""}
+];
+const LABEL = {ui:"UI/UX", graphic:"平面設計", web:"網站設計"};
+const box = document.getElementById("works");
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(cat){
+  box.innerHTML = WORKS.filter(w=>cat==="all"||w.cat===cat).map(w=>{
+    const thumb = w.img ? `<img src="${esc(w.img)}" alt="${esc(w.title)}" loading="lazy">` : `<span>作品圖片準備中</span>`;
+    const body = `<div class="thumb">${thumb}</div><span class="tag">${LABEL[w.cat]}</span><h3>${esc(w.title)}</h3><p>${esc(w.desc)}</p>`;
+    return `<article class="work">${w.link?`<a href="${esc(w.link)}" target="_blank" rel="noopener">${body}</a>`:body}</article>`;
+  }).join("");
+}
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  render(b.dataset.cat);
+}));
+render("all");
+</script>
 </body>
-
 </html>
